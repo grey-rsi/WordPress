@@ -686,6 +686,8 @@ class WP_Upgrader {
 
 		// Connect to the Filesystem first.
 		$res = $this->fs_connect( array( WP_CONTENT_DIR, $options['destination'] ) );
+
+		var_dump($res, $options);die;
 		// Mainly for non-connected filesystem.
 		if ( ! $res ) {
 			if ( ! $options['is_multi'] ) {
